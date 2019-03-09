@@ -1,0 +1,12 @@
+Dockerfile
+.gitignore
+.git
+*.pyc
+*.pyd
+*.pyo
+__pycache__
+.env
+ansible/
+jenkins/
+debian/
+Makefile

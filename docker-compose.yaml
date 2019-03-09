@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  aoihttp-app-boilerplate:
+    container_name: aoihttp-app-boilerplate
+    build: .
+    image: aoihttp_app_boilerplate:latest
+    ports:
+      - 6575:8080
+    networks:
+      - aoihttp-app-boilerplate-network
+    environment:
+      PYTHONPATH: /aoihttp_app_boilerplate_inner
+    stdin_open: true  # flag to allow debugging with pdb
+    tty: true  # flag to allow debugging with pdb
+
+
+networks:
+  aoihttp-app-boilerplate-network:
+    driver: bridge
